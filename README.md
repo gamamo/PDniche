@@ -16,32 +16,22 @@
 - Gabriel M. Moulatlet (mandaprogabriel@gmail.com)
 ﻿
 ### Folders and files:
-- There is one data folder and one code file.
+- There is one data folder and one code folder.
 ﻿
 	* Data folder:
-		* 	`DataForAnalysis_v21jul26_encodingFix_utf_NoDupli.csv`, with the following columns:
-    		* `Species`: Bird species
-			* `plant_id`: Plant species
-   			* `database`: individual network identification
-    		* `ref`: Original reference from where the network was obtained
-    		* `interaction`: 1 if the bird and plant species interact with each other and 0 if not.
-    		* `lat` and `long`: latitude and longitude coordinates
-    		* `Trophic.niche`: Bird species diet, information obtained from AVONET
-    		* `Realm`: Biogegraphic realm affiliation of each species.
-      	* `Avonet_realmFixed.csv`, with the following columns:
-      		*`Species`: Bird species
-      	    *`Trophic.niche`: Bird species diet, information obtained from AVONET
-      	  	*`Realm`: Biogegraphic realm affiliation of each species.
-    	
-  		* 	Auxiliary data sources (which we are not allowed to make avilable) buy are used in our analysis AVONET, Biogeographic Realms and the Human Impact Index. They can be found in the orginal publications:
+		* See README for the original data
+    	* `"Metanetwork_dataToAnalysis_v260826.csv"`: includes PDniche and PDcontrib values and human impacts for the meta-network
+     	* `"Indnetwork_dataToAnalysis_v260826.csv"`	: includes PDniche and PDcontrib values and human impacts for the local networks
+         	
+  		* 	Auxiliary data sources (which we are not allowed to make avilable) used in our analysis are AVONET, Biogeographic Realms and the Human Impact Index. They can be found in the respective orginal publications:
 		
 			- Tobias, J. A., C. Sheard, A. L. Pigot, A. J. M. Devenish, J. Yang, F. Sayol, M. H. C. Neate-Clegg, N. Alioravainen, T. L. Weeks, R. A. Barber, and Others. 2022. AVONET: morphological, ecological and geographical data for all birds. Ecology letters 25:581–597. Wiley Online Library.
-    - 	 Holt, B. G., J.-P. Lessard, M. K. Borregaard, S. A. Fritz, M. B. Araújo, D. Dimitrov, P.-H. Fabre, C. H. Graham, G. R. Graves, K. A. Jønsson, and Others. 2013. An update of Wallace’s zoogeographic regions of the world. Science 339:74–78. American Association for the Advancement of Science.
+    		- Holt, B. G., J.-P. Lessard, M. K. Borregaard, S. A. Fritz, M. B. Araújo, D. Dimitrov, P.-H. Fabre, C. H. Graham, G. R. Graves, K. A. Jønsson, and Others. 2013. An update of Wallace’s zoogeographic regions of the world. Science 339:74–78. American Association for the Advancement of Science.
 			- Theobald, D.M., Oakleaf, J.R., Moncrieff, G., Voigt, M., Kiesecker, J. & Kennedy, C.M. (2025). Global extent and change in human modification of terrestrial ecosystems from
 1990 to 2022. Scientific Data 12(489). [doi:10.1038/s41597-025-04892-2](https://doi.org/10.1038/s41597-025-04892-2)
 
-	* Code file:
-	    * `1-run_phylo_niche.R`: contains the codes to calculate the metrics PDniche and PDcontrib
+	* Code folder:
+	  * `1-run_phylo_niche.R`: contains the codes to calculate the metrics PDniche and PDcontrib
       * `2-HumanImpacts_Overview.R`: contains the codes to calculate the overall human impacts on PDniche and PDcontrib
       * `3-AnalysisMCMC.R`: contains the codes to run MCMCglmm models
       * `4-Figures_MCMC.R`: contains the codes to obtains the figures and tables resulting of MCMCglmm models
